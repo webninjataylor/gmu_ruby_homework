@@ -21,7 +21,11 @@ end
 # Be sure to only sum the numbers
 # (Hint: the is_a? method might be useful here)
 def sum_only_numbers(an_array)
-  # TODO write your code here
+  sum = 0
+  an_array.each do |item|
+    item.is_a?(Integer) ? sum += item : sum
+  end
+  return sum
 end
 
 # For i from 1 to 100, return an array.
@@ -39,5 +43,5 @@ end
 # Type "ruby functions.rb" at command line (Konsole) to run the script
 puts reverse([3,6,'dog']).inspect
 puts histogram('The Quick brown fox').inspect
-# puts sum_only_numbers [4, 'foo', [ ], 27, :rain, 3.14]
+puts sum_only_numbers [4, 'foo', [ ], 27, :rain, 3.14]
 # puts fizzbuzz.join("\n")
