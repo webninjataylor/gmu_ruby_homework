@@ -36,7 +36,19 @@ end
 # Otherwise, the element is simply the value of i
 # For example [1, 2, 'Fizz', 4, 'Buzz', 'Fizz', ..., 14, 'FizzBuzz', ...]
 def fizzbuzz
-  # TODO write your code here
+  zz_array = []
+  1.upto(100) do |num|
+    if num % 3 == 0 && num % 5 == 0
+      zz_array << 'FizzBuzz'
+    elsif num % 3 == 0
+      zz_array << 'Fizz'
+    elsif num % 5 == 0
+      zz_array << 'Buzz'
+    else
+      zz_array << num
+    end
+  end
+  return zz_array
 end
 
 # Uncomment a line to test the function you are developing
@@ -44,4 +56,4 @@ end
 puts reverse([3,6,'dog']).inspect
 puts histogram('The Quick brown fox').inspect
 puts sum_only_numbers [4, 'foo', [ ], 27, :rain, 3.14]
-# puts fizzbuzz.join("\n")
+puts fizzbuzz.join("\n")
