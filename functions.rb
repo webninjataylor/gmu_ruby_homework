@@ -23,7 +23,7 @@ end
 def sum_only_numbers(an_array)
   sum = 0
   an_array.each do |item|
-    item.is_a?(Integer) ? sum += item : sum
+    item.is_a?(Integer) || item.is_a?(Float) ? sum += item : sum
   end
   return sum
 end
